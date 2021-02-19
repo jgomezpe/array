@@ -74,8 +74,7 @@ public class Array<T> implements Iterable<T>{
      * @param n Initial buffer's length
      */
     public Array(int n){
-	sizeManager = new Fibonacci(n);
-	sizeManager.prev();
+	this(java.lang.reflect.Array.newInstance(Object.class,n),0);
     }
 
     /**
