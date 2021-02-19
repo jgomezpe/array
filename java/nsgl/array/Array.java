@@ -43,9 +43,9 @@ import java.util.Iterator;
 import nsgl.util.Fibonacci;
 
 /**
- * <p>Title: Vector</p>
+ * <p>Title: Array</p>
  *
- * <p>Description: A vector of objects (parameterized).</p>
+ * <p>Description: An array of objects (parameterized).</p>
  *
  */
 public class Array<T> implements Iterable<T>{
@@ -65,12 +65,12 @@ public class Array<T> implements Iterable<T>{
     Fibonacci sizeManager;
 
     /**
-     * Creates a Vector having an initial buffer with length 100
+     * Creates an array having an initial buffer with length 100
      */
     public Array(){ this(100); }
 	
     /**
-     * Creates a Vector having an initial buffer with the given length
+     * Creates an array having an initial buffer with the given length
      * @param n Initial buffer's length
      */
     public Array(int n){
@@ -79,15 +79,15 @@ public class Array<T> implements Iterable<T>{
     }
 
     /**
-     * Creates a Vector using the given buffer of elements
-     * @param buffer Initial elements of the Vector. Size is set to buffers length
+     * Creates an array using the given buffer of elements
+     * @param buffer Initial elements of the array. Size is set to buffers length
      */
     public Array(Object buffer){ this(buffer, java.lang.reflect.Array.getLength(buffer)); }
 
     /**
-     * Creates a Vector using the given buffer of elements and the given initial size
-     * @param buffer Initial elements of the Vector. 
-     * @param size Initial size of the Vector 
+     * Creates an array using the given buffer of elements and the given initial size
+     * @param buffer Initial elements of the array. 
+     * @param size Initial size of the array. 
      */    
     public Array(Object buffer, int size) {
 	this.buffer = buffer;
