@@ -36,11 +36,11 @@
  * (E-mail: <A HREF="mailto:jgomezpe@unal.edu.co">jgomezpe@unal.edu.co</A> )
  * @version 1.0
  */
-package nsgl.array;
+package speco.array;
 
 import java.util.Iterator;
 
-import nsgl.util.Fibonacci;
+import utila.Fibonacci;
 
 /**
  * <p>Title: Array</p>
@@ -144,7 +144,6 @@ public class Array<T> implements Iterable<T>{
      * Gets the element that is located at the given position.
      * @param index Position of the element to obtain
      * @return The element that is located at the given position
-     * @throws NoSuchElementException If the index is a non valid position
      */
     @SuppressWarnings("unchecked")
     public T get(int index) { return (T)java.lang.reflect.Array.get(buffer, index); };
@@ -153,7 +152,7 @@ public class Array<T> implements Iterable<T>{
      * Sets the element at the given position.
      * @param index Position of the element to set
      * @param data Element to set at the given position
-     * @return <i>true</> if the element could be set, <i>false</i> otherwise.
+     * @return <i>true</i> if the element could be set, <i>false</i> otherwise.
      */
     public boolean set(int index, T data) {
 	java.lang.reflect.Array.set(buffer, index, data);
@@ -200,7 +199,7 @@ public class Array<T> implements Iterable<T>{
      */
     public boolean add( T data ){
 	if( ready4Add() ) {
-	    set( size(), data );
+	    java.lang.reflect.Array.set(buffer, size, data);
 	    size++;
 	    return true;
 	}else return false;

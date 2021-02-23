@@ -1,6 +1,6 @@
 package test;
 
-import nsgl.array.Array;
+import speco.array.Array;
 
 public class Test {
     public static void main(String[] args) {
